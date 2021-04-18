@@ -5,10 +5,11 @@ import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.myapplication.databinding.ActivityMainBinding
 import com.example.myapplication.presentation.MainViewModel
+import com.example.myapplication.presentation.MainViewModelFactory
 
 class MainActivity : AppCompatActivity() {
 
-    private val viewModel: MainViewModel by viewModels()
+    private val viewModel: MainViewModel by viewModels { MainViewModelFactory() }
 
     private lateinit var views: ActivityMainBinding
 
